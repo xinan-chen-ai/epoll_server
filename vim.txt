@@ -1,0 +1,132 @@
+
+
+ 56 set ai
+ 57 set ic
+ 58 set number
+ 59 set showmatch
+ 60 set showmode
+ 61 set showcmd
+ 62 set warn
+ 63 set cindent
+ 64 set ruler
+ 65 set scrolloff=6
+ 66 set tabstop=4
+ 67 set wrap
+ 68 syntax enable
+ 69 syntax on
+
+
+
+ 73 " 其他配置...
+ 74 
+ 75 " 编辑和界面设置
+ 76 set syntax=on
+ 77 set noeb
+ 78 set confirm
+ 79 set autoindent
+ 80 set cindent
+ 81 set tabstop=4
+ 82 set softtabstop=4
+ 83 set shiftwidth=4
+ 84 set noexpandtab
+ 85 set smarttab
+ 86 set history=1000
+ 87 set nobackup
+ 88 set noswapfile
+ 89 set ignorecase
+ 90 set hlsearch
+ 91 set incsearch
+ 92 set gdefault
+ 93 set enc=utf-8
+ 94 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+ 95 set langmenu=zh_CN.UTF-8
+ 96 set laststatus=2
+ 97 set ruler
+
+set cmdheight=2
+filetype on
+filetype plugin on
+filetype indent on
+set viminfo+=!
+set linespace=0
+set wildmenu
+set backspace=2
+set whichwrap+=<,>,h,l
+set report=0
+set shortmess=atI
+set fillchars=vert:\ ,stl:\ ,stlnc:\
+set matchtime=5
+set scrolloff=3
+set smartindent
+set foldenable
+set foldmethod=syntax
+set foldcolumn=0
+setlocal foldlevel=1
+
+
+
+
+
+51开始
+
+" 不要使用vi的键盘模式，而是vim自己的
+set nocompatible
+" 语法高亮
+set syntax=on
+" 去掉输入错误的提示声音
+set noeb
+" 在处理未保存或只读文件的时候，弹出确认
+set confirm
+" 自动缩进
+set autoindent
+set cindent
+" Tab键的宽度
+set tabstop=4
+" 统一缩进为4
+set softtabstop=4
+set shiftwidth=4
+" 不要用空格代替制表符
+set noexpandtab
+" 在行和段开始处使用制表符
+set smarttab
+" 显示行号
+set number
+" 历史记录数
+set history=1000
+"禁止生成临时文件
+set nobackup
+set noswapfile
+"搜索忽略大小写
+set ignorecase
+"搜索逐字符高亮
+"set hlsearch
+set incsearch
+"编码设置
+set enc=utf-8
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+"语言设置
+set langmenu=zh_CN.UTF-8
+set helplang=cn
+"总是显示状态行
+set laststatus=2
+"命令行（在状态行下）的高度，默认为1，这里是2
+set cmdheight=2
+" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）"
+"set mouse=a
+set selection=exclusive
+set selectmode=mouse,key
+" 高亮显示匹配的括号
+set showmatch
+" 匹配括号高亮的时间（单位是十分之一秒）
+set matchtime=1
+" 光标移动到buffer的顶部和底部时保持3行距离
+set scrolloff=3
+" 为C程序提供自动缩进
+set smartindent
+set ruler    " 显示标尺
+set showcmd    " 输入的命令显示出来，看的清楚些
+
+
+if filteredable("/etc/vim/vimrc.local")
+source /etc/vim/vimrc.local
+endif
